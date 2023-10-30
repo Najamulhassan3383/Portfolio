@@ -11,7 +11,7 @@ const socialLinks = [
   {
     id: 1,
     icon: <FiGlobe />,
-    url: "najamulhassan.me",
+    url: "https://najamulhassan.me/",
   },
   {
     id: 2,
