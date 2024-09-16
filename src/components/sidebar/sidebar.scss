@@ -1,0 +1,54 @@
+@import "../../app.scss";
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-left: 8px;
+  padding-right: 8px;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  position: relative;
+
+  .bg {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    background: transparent;
+    &.open {
+      background: white; // This will be applied when the sidebar is open
+    }
+
+    @include mobile {
+      width: 200px;
+    }
+
+    .links {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      a {
+        font-size: 30px;
+      }
+    }
+  }
+
+  button {
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
