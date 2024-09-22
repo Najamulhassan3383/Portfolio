@@ -4,7 +4,7 @@ import "./portfolio.scss";
 const items = [
   {
     id: 1,
-    title: "Propert Rental Website",
+    title: "Property Rental Website",
     img: "https://raw.githubusercontent.com/Najamulhassan3383/PropertyRental/refs/heads/main/public/images/screen.jpg",
     desc: "A full-stack property rental website built with Next.js, featuring user-friendly property listings, chat functionality for seamless communication, and the ability to bookmark properties. Cloudinary is integrated for efficient image uploads, ensuring a smooth and scalable experience for managing property images. This platform provides a comprehensive solution for both property owners and renters.",
     liveLink: "https://proprental.vercel.app/",
