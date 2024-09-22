@@ -12,11 +12,12 @@ const items = [
   },
   {
     id: 2,
-    title: "Next.js Blog",
-    img: "https://images.pexels.com/photos/18023772/pexels-photo-18023772/free-photo-of-close-up-of-a-person-holding-a-wristwatch.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    liveLink: "https://proprental.vercel.app/",
-    githubLink: "",
+    title: "Full Stack E-Commerce Website",
+    img: "/Home_page.png",
+    desc: "During my internship at Arbisoft, I developed a scalable e-commerce platform featuring dynamic product listings, secure payment integration, order tracking, and inventory management. The project focused on enhancing the user experience for both customers and sellers, offering a seamless interface for browsing products, managing orders, and handling real-time stock updates, while ensuring performance and security.",
+    liveLink: "https://arbishop.onrender.com/",
+    githubLink:
+      "https://github.com/najamulhassanarbi/BVStraining/tree/ArbiShop/ArbiShop",
   },
   {
     id: 3,
