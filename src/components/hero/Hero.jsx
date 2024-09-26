@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const textVariants = {
   initial: {
@@ -23,6 +24,7 @@ const textVariants = {
     },
   },
 };
+
 const sliderVariants = {
   initial: {
     x: 0,
@@ -39,7 +41,7 @@ const sliderVariants = {
 
 const Hero = () => {
   return (
-    <div className="hero ">
+    <div className="hero" id="about">
       <div className="wrapper">
         <motion.div
           className="textContainer flex flex-col gap-3"
@@ -52,7 +54,7 @@ const Hero = () => {
           </p>
           <motion.h1
             variants={textVariants}
-            className="font-bold text-4xl  md:text-5xl lg:text-6xl  mb-2 text-blue-300"
+            className="font-bold text-4xl md:text-5xl lg:text-6xl mb-2 text-blue-300"
           >
             Najam Ul Hassan
           </motion.h1>
@@ -62,11 +64,37 @@ const Hero = () => {
           >
             I like to build things for the web.
           </motion.h2>
-          <motion.div variants={textVariants} className="buttons mb-4">
-            <motion.button variants={textVariants}>
-              See the Latest Works
-            </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+          <motion.div variants={textVariants} className="buttons mb-4 flex">
+            <Link
+              to="projects"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              <motion.button
+                variants={textVariants}
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:bg-blue-600 hover:scale-105 cursor-pointer"
+              >
+                See the Latest Works
+              </motion.button>
+            </Link>
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+            >
+              <motion.button
+                variants={textVariants}
+                className="bg-green-500 text-white px-6 py-3 rounded-lg transition-all duration-300 ease-in-out transform hover:bg-green-600 hover:scale-105 cursor-pointer"
+              >
+                Contact Me
+              </motion.button>
+            </Link>
           </motion.div>
           <motion.img
             variants={textVariants}
@@ -86,8 +114,7 @@ const Hero = () => {
         Enthusiast
       </motion.div>
       <div className="imageContainer">
-        <img src="/najam-removebg-preview.svg" alt="" className="w-48 h-48" />{" "}
-        {/* Adjust these values as needed */}
+        <img src="/najam-removebg-preview.svg" alt="" className="w-48 h-48" />
       </div>
     </div>
   );

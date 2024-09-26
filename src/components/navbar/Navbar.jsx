@@ -1,14 +1,15 @@
 import Sidebar from "../sidebar/Sidebar";
 import { motion } from "framer-motion";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
+import { Link } from "react-scroll";
 import logo from "../../../public/logo-removebg-preview.svg";
+
 const links = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
-  { name: "Contact", href: "/contact" },
+  { name: "Home", to: "home" },
+  { name: "About", to: "about" },
+  { name: "Projects", to: "projects" },
+  { name: "Contact", to: "contact" },
 ];
 
 const Navbar = () => {
@@ -24,27 +25,23 @@ const Navbar = () => {
       {/* Links */}
       <div className="hidden md:flex flex-row gap-4">
         {links.map((link) => (
-          <a
+          <Link
             key={link.name}
-            href={link.href}
-            className="text-white hover:text-blue-500"
+            to={link.to}
+            smooth={true}
+            duration={300}
+            spy={true}
+            exact="true"
+            offset={-80}
+            className="text-white hover:text-blue-500 cursor-pointer"
           >
             {link.name}
-          </a>
+          </Link>
         ))}
       </div>
 
-      {/* button to download resume */}
-      <a
-        href="/NajamUlHassan.pdf"
-        download
-        className="hidden md:flex items-center justify-center px-4 py-2 text-white bg-blue-500 rounded-md"
-      >
-        Download Resume
-      </a>
-
       {/* najam */}
-      {/* <div className="wrapper">
+      <div className="wrapper">
         <motion.span
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -52,22 +49,38 @@ const Navbar = () => {
         ></motion.span>
         <div className="flex flex-row justify-center items-center gap-2">
           <a
+            href="/Najam ul Hassan.pdf"
+            download
+            className="hidden md:flex items-center justify-center px-4 py-2 text-white bg-blue-500 rounded-md"
+          >
+            Download Resume
+          </a>
+          <a
             href="https://www.linkedin.com/in/najamul-hassan-977392200/"
             target="_blank"
             rel="noreferrer"
             className="linkedin hover:text-blue-500"
           >
             <FaLinkedin className="w-8 h-8" />
-            
           </a>
-          <a href="#" target="_blank" className="github hover:text-gray-500">
+          <a
+            href="https://github.com/Najamulhassan3383"
+            target="_blank"
+            rel="noreferrer"
+            className="github hover:text-gray-500"
+          >
             <FaGithubSquare className="w-8 h-8" />
           </a>
-          <a href="#" target="_blank" className="github hover:text-green-500">
+          <a
+            href="https://leetcode.com/u/najmulhassan721/"
+            target="_blank"
+            rel="noreferrer"
+            className="github hover:text-green-500"
+          >
             <SiLeetcode className="w-8 h-8" />
           </a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
