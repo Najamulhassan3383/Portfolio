@@ -30,7 +30,7 @@ const items = [
   {
     id: 4,
     title: "Memory Card Game",
-    img: "/memory_card.png",
+    img: "/momory_card.png",
     desc: "This is a challenge from frontend Masters. I have created a memory game app using React and Tailwind css. This is a game where you have to click on the cards and match them, using famous charaters.",
     liveLink: "https://memorycardgamenajam.netlify.app/",
     githubLink: "https://github.com/Najamulhassan3383/Memory-Card-Game",
