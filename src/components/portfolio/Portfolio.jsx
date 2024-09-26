@@ -22,10 +22,18 @@ const items = [
   {
     id: 3,
     title: "Dictionary App",
-    img: "/Home_page.png",
+    img: "/dictionary.png",
     desc: "This is a challenge from frontend Masters. I have created a dictionary app using React and Material UI. This app is fetching data from an API and displaying it in a user-friendly way.",
     liveLink: "https://dictionary-app012345.netlify.app/",
     githubLink: "https://github.com/Najamulhassan3383/Dictionary-App",
+  },
+  {
+    id: 4,
+    title: "Memory Card Game",
+    img: "/memory_card.png",
+    desc: "This is a challenge from frontend Masters. I have created a memory game app using React and Tailwind css. This is a game where you have to click on the cards and match them, using famous charaters.",
+    liveLink: "https://memorycardgamenajam.netlify.app/",
+    githubLink: "https://github.com/Najamulhassan3383/Memory-Card-Game",
   },
 ];
 
